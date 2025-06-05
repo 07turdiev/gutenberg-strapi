@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kitoblars",
+  "info": {
+    "singularName": "kitoblar",
+    "pluralName": "kitoblars",
+    "displayName": "Kitoblar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Nomi": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Muallif": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "kitob_rasmi": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sana": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Tavsif": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "muallifs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::author.author",
+      "mappedBy": "kitoblar"
+    }
+  }
+}
