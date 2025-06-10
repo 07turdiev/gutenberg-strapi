@@ -4,7 +4,7 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Article",
+    "displayName": "Maqola",
     "description": "Create your blog content"
   },
   "options": {
@@ -12,18 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "Nomi": {
       "type": "string"
     },
-    "description": {
+    "Tavsfi": {
       "type": "text",
       "maxLength": 80
     },
-    "slug": {
+    "havolasi": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "Nomi"
     },
-    "cover": {
+    "Rasmi": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -32,12 +32,6 @@
         "files",
         "videos"
       ]
-    },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
     },
     "category": {
       "type": "relation",

@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "title": {
+    "Nomi": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -24,7 +24,7 @@
         }
       }
     },
-    "blocks": {
+    "Bloklar": {
       "type": "dynamiczone",
       "pluginOptions": {
         "i18n": {

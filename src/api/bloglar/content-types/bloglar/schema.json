@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "kitoblars",
+  "collectionName": "bloglars",
   "info": {
-    "singularName": "kitoblar",
-    "pluralName": "kitoblars",
-    "displayName": "Kitoblar"
+    "singularName": "bloglar",
+    "pluralName": "bloglars",
+    "displayName": "Bloglar"
   },
   "options": {
     "draftAndPublish": true
@@ -25,7 +25,7 @@
       "required": true,
       "unique": true
     },
-    "kitob_rasmi": {
+    "Rasmi": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
@@ -41,26 +41,8 @@
         "audios"
       ]
     },
-    "yuklangan_vaqti": {
+    "sana": {
       "type": "datetime",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true,
-      "unique": false
-    },
-    "baho": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "Tavsifi": {
-      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -68,10 +50,14 @@
       },
       "required": true
     },
-    "mualliflars": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::muallif.muallif"
+    "Matn": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }

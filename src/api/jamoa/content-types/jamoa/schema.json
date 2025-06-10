@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "kitoblars",
+  "collectionName": "jamoas",
   "info": {
-    "singularName": "kitoblar",
-    "pluralName": "kitoblars",
-    "displayName": "Kitoblar"
+    "singularName": "jamoa",
+    "pluralName": "jamoas",
+    "displayName": "Jamoa"
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +15,7 @@
     }
   },
   "attributes": {
-    "Nomi": {
+    "Ismi": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -25,7 +25,7 @@
       "required": true,
       "unique": true
     },
-    "kitob_rasmi": {
+    "Rasmi": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
@@ -41,23 +41,14 @@
         "audios"
       ]
     },
-    "yuklangan_vaqti": {
-      "type": "datetime",
+    "Lavozimi": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": true,
-      "unique": false
-    },
-    "baho": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "required": true
     },
     "Tavsifi": {
       "type": "blocks",
@@ -67,11 +58,6 @@
         }
       },
       "required": true
-    },
-    "mualliflars": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::muallif.muallif"
     }
   }
 }
