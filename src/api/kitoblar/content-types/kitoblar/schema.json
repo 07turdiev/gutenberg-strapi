@@ -15,51 +15,26 @@
     }
   },
   "attributes": {
-    "Nomi": {
+    "nomi": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": true,
-      "unique": true
+      "required": true
     },
-    "kitob_rasmi": {
-      "type": "media",
+    "slug": {
+      "type": "uid",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "targetField": "nomi",
+      "required": true
     },
-    "yuklangan_vaqti": {
-      "type": "datetime",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true,
-      "unique": false
-    },
-    "baho": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "Tavsifi": {
+    "tavsifi": {
       "type": "blocks",
       "pluginOptions": {
         "i18n": {
@@ -68,10 +43,149 @@
       },
       "required": true
     },
-    "mualliflars": {
+    "muqova": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "yosh_chegarasi": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "enum": [
+        "yosh6+",
+        "yosh12+",
+        "yosh16+",
+        "yosh18+"
+      ]
+    },
+    "dolzarb": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": false
+    },
+    "yangi": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": true
+    },
+    "reyting": {
+      "type": "decimal",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0
+    },
+    "narxi": {
+      "type": "decimal",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": true
+    },
+    "chegirma_narxi": {
+      "type": "decimal",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "unique": false
+    },
+    "ISBN": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "unique": true
+    },
+    "sahifalar_soni": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "chop_yili": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "omborda": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0
+    },
+    "audio": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "audio_davomiyligi": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "mualliflar": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::muallif.muallif"
+      "relation": "manyToOne",
+      "target": "api::mualliflar.mualliflar",
+      "inversedBy": "kitoblars"
+    },
+    "janrlars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::janrlar.janrlar",
+      "mappedBy": "kitoblars"
+    },
+    "kategoriyalars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kategoriyalar.kategoriyalar",
+      "mappedBy": "kitoblars"
     }
   }
 }

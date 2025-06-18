@@ -373,16 +373,15 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiAboutAbout extends Struct.SingleTypeSchema {
-  collectionName: 'abouts';
+export interface ApiAloqaAloqa extends Struct.SingleTypeSchema {
+  collectionName: 'aloqas';
   info: {
-    description: 'Write about yourself and the content you create';
-    displayName: 'Biz haqimizda';
-    pluralName: 'abouts';
-    singularName: 'about';
+    displayName: 'Aloqa';
+    pluralName: 'aloqas';
+    singularName: 'aloqa';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   pluginOptions: {
     i18n: {
@@ -390,64 +389,30 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    Bloklar: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    > &
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
     locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'>;
-    Nomi: Schema.Attribute.String &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::aloqa.aloqa'>;
+    manzili: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
-  collectionName: 'articles';
-  info: {
-    description: 'Create your blog content';
-    displayName: 'Maqola';
-    pluralName: 'articles';
-    singularName: 'article';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    blocks: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
-    >;
-    category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    havolasi: Schema.Attribute.UID<'Nomi'>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::article.article'
-    > &
-      Schema.Attribute.Private;
-    Nomi: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    Rasmi: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
-    Tavsfi: Schema.Attribute.Text &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
+    telefoni: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
       }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -455,12 +420,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiBloglarBloglar extends Struct.CollectionTypeSchema {
-  collectionName: 'bloglars';
+export interface ApiBizHaqimizdaBizHaqimizda extends Struct.SingleTypeSchema {
+  collectionName: 'biz_haqimizdas';
   info: {
-    displayName: 'Bloglar';
-    pluralName: 'bloglars';
-    singularName: 'bloglar';
+    displayName: 'biz-haqimizda';
+    pluralName: 'biz-haqimizdas';
+    singularName: 'biz-haqimizda';
   };
   options: {
     draftAndPublish: true;
@@ -477,32 +442,10 @@ export interface ApiBloglarBloglar extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::bloglar.bloglar'
+      'api::biz-haqimizda.biz-haqimizda'
     >;
-    Matn: Schema.Attribute.Blocks &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    Nomi: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     publishedAt: Schema.Attribute.DateTime;
-    Rasmi: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    sana: Schema.Attribute.DateTime &
+    tavsifi: Schema.Attribute.Blocks &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -515,76 +458,129 @@ export interface ApiBloglarBloglar extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
-  collectionName: 'categories';
+export interface ApiBlogPostlariBlogPostlari
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'blog_postlaris';
   info: {
-    description: 'Organize your content into categories';
-    displayName: 'Category';
-    pluralName: 'categories';
-    singularName: 'category';
+    displayName: 'blog-postlari';
+    pluralName: 'blog-postlaris';
+    singularName: 'blog-postlari';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
-    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
+    audio: Schema.Attribute.Media<'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    chop_sanasi: Schema.Attribute.Date &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    kontent: Schema.Attribute.Blocks &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    korishlar_soni: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::category.category'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String;
+      'api::blog-postlari.blog-postlari'
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID;
+    rasmi: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    sarlavha: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Schema.Attribute.UID<'sarlavha'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    youtube_havolasi: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
   };
 }
 
-export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
-  collectionName: 'globals';
+export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
+  extends Struct.SingleTypeSchema {
+  collectionName: 'ijtimoiy_tarmoqlars';
   info: {
-    description: 'Define global settings';
-    displayName: 'Global';
-    pluralName: 'globals';
-    singularName: 'global';
+    displayName: 'ijtimoiy-tarmoqlar';
+    pluralName: 'ijtimoiy-tarmoqlars';
+    singularName: 'ijtimoiy-tarmoqlar';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    defaultSeo: Schema.Attribute.Component<'shared.seo', false>;
-    favicon: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    facebook_havolasi: Schema.Attribute.String;
+    instagram_havolasi: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::global.global'
+      'api::ijtimoiy-tarmoqlar.ijtimoiy-tarmoqlar'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    siteDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    siteName: Schema.Attribute.String & Schema.Attribute.Required;
+    telegram_havolasi: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    youtube_havolasi: Schema.Attribute.String;
   };
 }
 
-export interface ApiJamoaJamoa extends Struct.CollectionTypeSchema {
-  collectionName: 'jamoas';
+export interface ApiJamoaAzolariJamoaAzolari
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'jamoa_azolaris';
   info: {
-    displayName: 'Jamoa';
-    pluralName: 'jamoas';
-    singularName: 'jamoa';
+    displayName: 'jamoa-azolari';
+    pluralName: 'jamoa-azolaris';
+    singularName: 'jamoa-azolari';
   };
   options: {
     draftAndPublish: true;
@@ -598,9 +594,8 @@ export interface ApiJamoaJamoa extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Ismi: Schema.Attribute.String &
+    ismi: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -614,22 +609,105 @@ export interface ApiJamoaJamoa extends Struct.CollectionTypeSchema {
         };
       }>;
     locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::jamoa.jamoa'>;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::jamoa-azolari.jamoa-azolari'
+    >;
     publishedAt: Schema.Attribute.DateTime;
-    Rasmi: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+    rasmi: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    tarjimai_holi: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Tavsifi: Schema.Attribute.Blocks &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiJanrlarJanrlar extends Struct.CollectionTypeSchema {
+  collectionName: 'janrlars';
+  info: {
+    displayName: 'Janrlar';
+    pluralName: 'janrlars';
+    singularName: 'janrlar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: false;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    kitoblars: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::kitoblar.kitoblar'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::janrlar.janrlar'
+    > &
+      Schema.Attribute.Private;
+    nomi: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'nomi'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiKategoriyalarKategoriyalar
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'kategoriyalars';
+  info: {
+    displayName: 'kategoriyalar';
+    pluralName: 'kategoriyalars';
+    singularName: 'kategoriyalar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ikonka: Schema.Attribute.String;
+    kategoriyalar: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::kategoriyalar.kategoriyalar'
+    >;
+    kategoriyalars: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::kategoriyalar.kategoriyalar'
+    >;
+    kitoblars: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::kitoblar.kitoblar'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::kategoriyalar.kategoriyalar'
+    > &
+      Schema.Attribute.Private;
+    nomi: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'nomi'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -652,40 +730,111 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    baho: Schema.Attribute.Integer &
+    audio: Schema.Attribute.Media<'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+      }>;
+    audio_davomiyligi: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    chegirma_narxi: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    chop_yili: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
         };
       }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    kitob_rasmi: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
-      Schema.Attribute.Required &
+    dolzarb: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<false>;
+    ISBN: Schema.Attribute.Text &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
         };
       }>;
+    janrlars: Schema.Attribute.Relation<'manyToMany', 'api::janrlar.janrlar'>;
+    kategoriyalars: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::kategoriyalar.kategoriyalar'
+    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::kitoblar.kitoblar'
     >;
-    mualliflars: Schema.Attribute.Relation<'oneToMany', 'api::muallif.muallif'>;
-    Nomi: Schema.Attribute.String &
+    mualliflar: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::mualliflar.mualliflar'
+    >;
+    muqova: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    narxi: Schema.Attribute.Decimal &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    nomi: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    omborda: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
-    Tavsifi: Schema.Attribute.Blocks &
+    reyting: Schema.Attribute.Decimal &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
+    sahifalar_soni: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    slug: Schema.Attribute.UID<'nomi'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    tavsifi: Schema.Attribute.Blocks &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -695,22 +844,30 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    yuklangan_vaqti: Schema.Attribute.DateTime &
-      Schema.Attribute.Required &
+    yangi: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<true>;
+    yosh_chegarasi: Schema.Attribute.Enumeration<
+      ['yosh6+', 'yosh12+', 'yosh16+', 'yosh18+']
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
         };
       }>;
   };
 }
 
-export interface ApiMuallifMuallif extends Struct.CollectionTypeSchema {
-  collectionName: 'muallifs';
+export interface ApiMualliflarMualliflar extends Struct.CollectionTypeSchema {
+  collectionName: 'mualliflars';
   info: {
     displayName: 'Mualliflar';
-    pluralName: 'muallifs';
-    singularName: 'muallif';
+    pluralName: 'mualliflars';
+    singularName: 'mualliflar';
   };
   options: {
     draftAndPublish: true;
@@ -724,34 +881,76 @@ export interface ApiMuallifMuallif extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Ismi: Schema.Attribute.String &
+    ismi: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    kitoblars: Schema.Attribute.Relation<'oneToMany', 'api::kitoblar.kitoblar'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::muallif.muallif'
+      'api::mualliflar.mualliflar'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Rasmi: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+    rasmi: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    romanlar_soni: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
+    slug: Schema.Attribute.UID<'ismi'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Tavsif: Schema.Attribute.Blocks &
-      Schema.Attribute.Required &
+    tarjimai_holi: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiStatistikaStatistika extends Struct.SingleTypeSchema {
+  collectionName: 'statistikas';
+  info: {
+    displayName: 'Statistika';
+    pluralName: 'statistikas';
+    singularName: 'statistika';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    foydalanuvchilar_soni: Schema.Attribute.Integer;
+    kitoblar_soni: Schema.Attribute.Integer;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::statistika.statistika'
+    > &
+      Schema.Attribute.Private;
+    mualliflar_soni: Schema.Attribute.Integer & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1267,14 +1466,16 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::about.about': ApiAboutAbout;
-      'api::article.article': ApiArticleArticle;
-      'api::bloglar.bloglar': ApiBloglarBloglar;
-      'api::category.category': ApiCategoryCategory;
-      'api::global.global': ApiGlobalGlobal;
-      'api::jamoa.jamoa': ApiJamoaJamoa;
+      'api::aloqa.aloqa': ApiAloqaAloqa;
+      'api::biz-haqimizda.biz-haqimizda': ApiBizHaqimizdaBizHaqimizda;
+      'api::blog-postlari.blog-postlari': ApiBlogPostlariBlogPostlari;
+      'api::ijtimoiy-tarmoqlar.ijtimoiy-tarmoqlar': ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar;
+      'api::jamoa-azolari.jamoa-azolari': ApiJamoaAzolariJamoaAzolari;
+      'api::janrlar.janrlar': ApiJanrlarJanrlar;
+      'api::kategoriyalar.kategoriyalar': ApiKategoriyalarKategoriyalar;
       'api::kitoblar.kitoblar': ApiKitoblarKitoblar;
-      'api::muallif.muallif': ApiMuallifMuallif;
+      'api::mualliflar.mualliflar': ApiMualliflarMualliflar;
+      'api::statistika.statistika': ApiStatistikaStatistika;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

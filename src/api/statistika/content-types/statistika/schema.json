@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "statistikas",
+  "info": {
+    "singularName": "statistika",
+    "pluralName": "statistikas",
+    "displayName": "Statistika"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mualliflar_soni": {
+      "type": "integer",
+      "required": true
+    },
+    "kitoblar_soni": {
+      "type": "integer"
+    },
+    "foydalanuvchilar_soni": {
+      "type": "integer"
+    }
+  }
+}

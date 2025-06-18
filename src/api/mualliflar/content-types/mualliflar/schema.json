@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mualliflars",
+  "info": {
+    "singularName": "mualliflar",
+    "pluralName": "mualliflars",
+    "displayName": "Mualliflar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "ismi": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "ismi",
+      "required": true
+    },
+    "tarjimai_holi": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "rasmi": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "romanlar_soni": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "default": 0
+    },
+    "kitoblars": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::kitoblar.kitoblar",
+      "mappedBy": "mualliflar"
+    }
+  }
+}

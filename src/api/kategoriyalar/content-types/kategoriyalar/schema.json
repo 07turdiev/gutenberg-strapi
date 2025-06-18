@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kategoriyalars",
+  "info": {
+    "singularName": "kategoriyalar",
+    "pluralName": "kategoriyalars",
+    "displayName": "kategoriyalar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nomi": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "nomi"
+    },
+    "kitoblars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kitoblar.kitoblar",
+      "inversedBy": "kategoriyalars"
+    },
+    "ikonka": {
+      "type": "string"
+    },
+    "kategoriyalar": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kategoriyalar.kategoriyalar",
+      "inversedBy": "kategoriyalars"
+    },
+    "kategoriyalars": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::kategoriyalar.kategoriyalar",
+      "mappedBy": "kategoriyalar"
+    }
+  }
+}

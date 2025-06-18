@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "ijtimoiy_tarmoqlars",
+  "info": {
+    "singularName": "ijtimoiy-tarmoqlar",
+    "pluralName": "ijtimoiy-tarmoqlars",
+    "displayName": "ijtimoiy-tarmoqlar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "facebook_havolasi": {
+      "type": "string"
+    },
+    "instagram_havolasi": {
+      "type": "string"
+    },
+    "telegram_havolasi": {
+      "type": "string"
+    },
+    "youtube_havolasi": {
+      "type": "string"
+    }
+  }
+}

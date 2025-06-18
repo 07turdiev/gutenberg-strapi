@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "biz_haqimizdas",
+  "info": {
+    "singularName": "biz-haqimizda",
+    "pluralName": "biz-haqimizdas",
+    "displayName": "biz-haqimizda"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "tavsifi": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}
