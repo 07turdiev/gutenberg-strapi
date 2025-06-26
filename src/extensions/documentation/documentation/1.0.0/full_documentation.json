@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-06-18T11:05:49.092Z"
+    "x-generation-date": "2025-06-26T12:54:44.179Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8488,6 +8488,7 @@
           "data": {
             "required": [
               "ismi",
+              "rasmi",
               "tarjimai_holi",
               "Lavozimi"
             ],
@@ -8573,6 +8574,7 @@
         "type": "object",
         "required": [
           "ismi",
+          "rasmi",
           "tarjimai_holi",
           "Lavozimi"
         ],
@@ -10168,10 +10170,10 @@
                 "yosh_chegarasi": {
                   "type": "string",
                   "enum": [
-                    "yosh6+",
-                    "yosh12+",
-                    "yosh16+",
-                    "yosh18+"
+                    "yosh6",
+                    "yosh12",
+                    "yosh18",
+                    "yosh21"
                   ]
                 },
                 "dolzarb": {
@@ -10332,9 +10334,6 @@
                       }
                     }
                   }
-                },
-                "audio_davomiyligi": {
-                  "type": "integer"
                 },
                 "mualliflar": {
                   "type": "object",
@@ -11626,10 +11625,10 @@
                 "yosh_chegarasi": {
                   "type": "string",
                   "enum": [
-                    "yosh6+",
-                    "yosh12+",
-                    "yosh16+",
-                    "yosh18+"
+                    "yosh6",
+                    "yosh12",
+                    "yosh18",
+                    "yosh21"
                   ]
                 },
                 "dolzarb": {
@@ -11790,9 +11789,6 @@
                       }
                     }
                   }
-                },
-                "audio_davomiyligi": {
-                  "type": "integer"
                 },
                 "mualliflar": {
                   "type": "object",
@@ -12396,10 +12392,10 @@
               "yosh_chegarasi": {
                 "type": "string",
                 "enum": [
-                  "yosh6+",
-                  "yosh12+",
-                  "yosh16+",
-                  "yosh18+"
+                  "yosh6",
+                  "yosh12",
+                  "yosh18",
+                  "yosh21"
                 ]
               },
               "dolzarb": {
@@ -12442,9 +12438,6 @@
                   }
                 ],
                 "example": "string or id"
-              },
-              "audio_davomiyligi": {
-                "type": "integer"
               },
               "mualliflar": {
                 "oneOf": [
@@ -13165,10 +13158,10 @@
           "yosh_chegarasi": {
             "type": "string",
             "enum": [
-              "yosh6+",
-              "yosh12+",
-              "yosh16+",
-              "yosh18+"
+              "yosh6",
+              "yosh12",
+              "yosh18",
+              "yosh21"
             ]
           },
           "dolzarb": {
@@ -13329,9 +13322,6 @@
                 }
               }
             }
-          },
-          "audio_davomiyligi": {
-            "type": "integer"
           },
           "mualliflar": {
             "type": "object",
@@ -13631,10 +13621,10 @@
                     "yosh_chegarasi": {
                       "type": "string",
                       "enum": [
-                        "yosh6+",
-                        "yosh12+",
-                        "yosh16+",
-                        "yosh18+"
+                        "yosh6",
+                        "yosh12",
+                        "yosh18",
+                        "yosh21"
                       ]
                     },
                     "dolzarb": {
@@ -13795,9 +13785,6 @@
                           }
                         }
                       }
-                    },
-                    "audio_davomiyligi": {
-                      "type": "integer"
                     },
                     "mualliflar": {
                       "type": "object",
@@ -15085,10 +15072,10 @@
                 "yosh_chegarasi": {
                   "type": "string",
                   "enum": [
-                    "yosh6+",
-                    "yosh12+",
-                    "yosh16+",
-                    "yosh18+"
+                    "yosh6",
+                    "yosh12",
+                    "yosh18",
+                    "yosh21"
                   ]
                 },
                 "dolzarb": {
@@ -15249,9 +15236,6 @@
                       }
                     }
                   }
-                },
-                "audio_davomiyligi": {
-                  "type": "integer"
                 },
                 "mualliflar": {
                   "type": "object",

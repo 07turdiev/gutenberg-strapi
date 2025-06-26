@@ -533,7 +533,7 @@ export interface ApiBlogPostlariBlogPostlari
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    youtube_havolasi: Schema.Attribute.String &
+    youtube_havolasi: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -615,6 +615,7 @@ export interface ApiJamoaAzolariJamoaAzolari
     >;
     publishedAt: Schema.Attribute.DateTime;
     rasmi: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -736,12 +737,6 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    audio_davomiyligi: Schema.Attribute.Integer &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     chegirma_narxi: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -852,7 +847,7 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<true>;
     yosh_chegarasi: Schema.Attribute.Enumeration<
-      ['yosh6+', 'yosh12+', 'yosh16+', 'yosh18+']
+      ['yosh6', 'yosh12', 'yosh18', 'yosh21']
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

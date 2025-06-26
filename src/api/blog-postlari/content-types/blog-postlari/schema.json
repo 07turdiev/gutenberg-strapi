@@ -86,7 +86,7 @@
       ]
     },
     "youtube_havolasi": {
-      "type": "string",
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": false

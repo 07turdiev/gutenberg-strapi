@@ -64,10 +64,10 @@
         }
       },
       "enum": [
-        "yosh6+",
-        "yosh12+",
-        "yosh16+",
-        "yosh18+"
+        "yosh6",
+        "yosh12",
+        "yosh18",
+        "yosh21"
       ]
     },
     "dolzarb": {
@@ -160,14 +160,6 @@
       "allowedTypes": [
         "audios"
       ]
-    },
-    "audio_davomiyligi": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
     },
     "mualliflar": {
       "type": "relation",
