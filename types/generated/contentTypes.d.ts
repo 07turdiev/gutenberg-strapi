@@ -809,6 +809,13 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    sotib_olish: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     tavsifi: Schema.Attribute.Blocks &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

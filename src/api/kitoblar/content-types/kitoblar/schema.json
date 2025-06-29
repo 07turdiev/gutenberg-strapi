@@ -115,6 +115,15 @@
       },
       "unique": false
     },
+    "sotib_olish": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
     "ISBN": {
       "type": "text",
       "pluginOptions": {

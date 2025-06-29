@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-06-27T16:37:49.959Z"
+    "x-generation-date": "2025-06-29T16:51:01.013Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -10194,6 +10194,9 @@
                   "type": "number",
                   "format": "float"
                 },
+                "sotib_olish": {
+                  "type": "string"
+                },
                 "ISBN": {
                   "type": "string"
                 },
@@ -11649,6 +11652,9 @@
                   "type": "number",
                   "format": "float"
                 },
+                "sotib_olish": {
+                  "type": "string"
+                },
                 "ISBN": {
                   "type": "string"
                 },
@@ -12367,7 +12373,8 @@
               "slug",
               "tavsifi",
               "muqova",
-              "narxi"
+              "narxi",
+              "sotib_olish"
             ],
             "type": "object",
             "properties": {
@@ -12415,6 +12422,9 @@
               "chegirma_narxi": {
                 "type": "number",
                 "format": "float"
+              },
+              "sotib_olish": {
+                "type": "string"
               },
               "ISBN": {
                 "type": "string"
@@ -12541,7 +12551,8 @@
           "slug",
           "tavsifi",
           "muqova",
-          "narxi"
+          "narxi",
+          "sotib_olish"
         ],
         "properties": {
           "id": {
@@ -13182,6 +13193,9 @@
             "type": "number",
             "format": "float"
           },
+          "sotib_olish": {
+            "type": "string"
+          },
           "ISBN": {
             "type": "string"
           },
@@ -13644,6 +13658,9 @@
                     "chegirma_narxi": {
                       "type": "number",
                       "format": "float"
+                    },
+                    "sotib_olish": {
+                      "type": "string"
                     },
                     "ISBN": {
                       "type": "string"
@@ -15095,6 +15112,9 @@
                 "chegirma_narxi": {
                   "type": "number",
                   "format": "float"
+                },
+                "sotib_olish": {
+                  "type": "string"
                 },
                 "ISBN": {
                   "type": "string"
