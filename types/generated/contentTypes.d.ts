@@ -403,7 +403,7 @@ export interface ApiAloqaAloqa extends Struct.SingleTypeSchema {
 export interface ApiBizHaqimizdaBizHaqimizda extends Struct.SingleTypeSchema {
   collectionName: 'biz_haqimizdas';
   info: {
-    displayName: 'biz-haqimizda';
+    displayName: 'Biz-haqimizda';
     pluralName: 'biz-haqimizdas';
     singularName: 'biz-haqimizda';
   };
@@ -442,7 +442,7 @@ export interface ApiBlogPostlariBlogPostlari
   extends Struct.CollectionTypeSchema {
   collectionName: 'blog_postlaris';
   info: {
-    displayName: 'blog-postlari';
+    displayName: 'Blog-postlari';
     pluralName: 'blog-postlaris';
     singularName: 'blog-postlari';
   };
@@ -559,7 +559,7 @@ export interface ApiJamoaAzolariJamoaAzolari
   extends Struct.CollectionTypeSchema {
   collectionName: 'jamoa_azolaris';
   info: {
-    displayName: 'jamoa-azolari';
+    displayName: 'Jamoa-azolari';
     pluralName: 'jamoa-azolaris';
     singularName: 'jamoa-azolari';
   };
@@ -657,7 +657,7 @@ export interface ApiKategoriyalarKategoriyalar
   extends Struct.CollectionTypeSchema {
   collectionName: 'kategoriyalars';
   info: {
-    displayName: 'kategoriyalar';
+    displayName: 'Kategoriyalar';
     pluralName: 'kategoriyalars';
     singularName: 'kategoriyalar';
   };
