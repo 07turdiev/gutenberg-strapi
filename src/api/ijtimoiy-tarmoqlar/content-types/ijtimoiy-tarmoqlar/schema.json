@@ -4,7 +4,7 @@
   "info": {
     "singularName": "ijtimoiy-tarmoqlar",
     "pluralName": "ijtimoiy-tarmoqlars",
-    "displayName": "ijtimoiy-tarmoqlar"
+    "displayName": "Ijtimoiy-tarmoqlar"
   },
   "options": {
     "draftAndPublish": true
@@ -21,6 +21,9 @@
       "type": "string"
     },
     "youtube_havolasi": {
+      "type": "string"
+    },
+    "x_havolasi": {
       "type": "string"
     }
   }

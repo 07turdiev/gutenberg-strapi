@@ -526,7 +526,7 @@ export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
   extends Struct.SingleTypeSchema {
   collectionName: 'ijtimoiy_tarmoqlars';
   info: {
-    displayName: 'ijtimoiy-tarmoqlar';
+    displayName: 'Ijtimoiy-tarmoqlar';
     pluralName: 'ijtimoiy-tarmoqlars';
     singularName: 'ijtimoiy-tarmoqlar';
   };
@@ -550,6 +550,7 @@ export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    x_havolasi: Schema.Attribute.String;
     youtube_havolasi: Schema.Attribute.String;
   };
 }
