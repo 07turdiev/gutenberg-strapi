@@ -547,10 +547,10 @@ export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     telegram_havolasi: Schema.Attribute.String;
+    twitter_havolasi: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    x_havolasi: Schema.Attribute.String;
     youtube_havolasi: Schema.Attribute.String;
   };
 }

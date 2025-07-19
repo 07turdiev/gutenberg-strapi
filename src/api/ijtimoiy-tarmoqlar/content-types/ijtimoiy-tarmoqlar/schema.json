@@ -23,7 +23,7 @@
     "youtube_havolasi": {
       "type": "string"
     },
-    "x_havolasi": {
+    "twitter_havolasi": {
       "type": "string"
     }
   }
