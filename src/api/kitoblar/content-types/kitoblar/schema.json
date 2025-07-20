@@ -176,17 +176,11 @@
       "target": "api::mualliflar.mualliflar",
       "inversedBy": "kitoblars"
     },
-    "janrlars": {
+    "kategoriya": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::janrlar.janrlar",
-      "mappedBy": "kitoblars"
-    },
-    "kategoriyalars": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::kategoriyalar.kategoriyalar",
-      "mappedBy": "kitoblars"
+      "target": "api::kategoriya.kategoriya",
+      "mappedBy": "kitoblar"
     }
   }
 }

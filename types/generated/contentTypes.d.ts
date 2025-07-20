@@ -615,51 +615,12 @@ export interface ApiJamoaAzolariJamoaAzolari
   };
 }
 
-export interface ApiJanrlarJanrlar extends Struct.CollectionTypeSchema {
-  collectionName: 'janrlars';
+export interface ApiKategoriyaKategoriya extends Struct.CollectionTypeSchema {
+  collectionName: 'kategoriyas';
   info: {
-    displayName: 'Janrlar';
-    pluralName: 'janrlars';
-    singularName: 'janrlar';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: false;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    kitoblars: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::kitoblar.kitoblar'
-    >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::janrlar.janrlar'
-    > &
-      Schema.Attribute.Private;
-    nomi: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'nomi'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiKategoriyalarKategoriyalar
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'kategoriyalars';
-  info: {
-    displayName: 'Kategoriyalar';
-    pluralName: 'kategoriyalars';
-    singularName: 'kategoriyalar';
+    displayName: 'Kategoriya';
+    pluralName: 'kategoriyas';
+    singularName: 'kategoriya';
   };
   options: {
     draftAndPublish: true;
@@ -668,28 +629,16 @@ export interface ApiKategoriyalarKategoriyalar
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    ikonka: Schema.Attribute.String;
-    kategoriyalar: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::kategoriyalar.kategoriyalar'
-    >;
-    kategoriyalars: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::kategoriyalar.kategoriyalar'
-    >;
-    kitoblars: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::kitoblar.kitoblar'
-    >;
+    kitoblar: Schema.Attribute.Relation<'manyToMany', 'api::kitoblar.kitoblar'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::kategoriyalar.kategoriyalar'
+      'api::kategoriya.kategoriya'
     > &
       Schema.Attribute.Private;
-    nomi: Schema.Attribute.String & Schema.Attribute.Required;
+    Nomi: Schema.Attribute.String & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'nomi'>;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -747,10 +696,9 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    janrlars: Schema.Attribute.Relation<'manyToMany', 'api::janrlar.janrlar'>;
-    kategoriyalars: Schema.Attribute.Relation<
+    kategoriya: Schema.Attribute.Relation<
       'manyToMany',
-      'api::kategoriyalar.kategoriyalar'
+      'api::kategoriya.kategoriya'
     >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
@@ -1454,8 +1402,7 @@ declare module '@strapi/strapi' {
       'api::blog-postlari.blog-postlari': ApiBlogPostlariBlogPostlari;
       'api::ijtimoiy-tarmoqlar.ijtimoiy-tarmoqlar': ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar;
       'api::jamoa-azolari.jamoa-azolari': ApiJamoaAzolariJamoaAzolari;
-      'api::janrlar.janrlar': ApiJanrlarJanrlar;
-      'api::kategoriyalar.kategoriyalar': ApiKategoriyalarKategoriyalar;
+      'api::kategoriya.kategoriya': ApiKategoriyaKategoriya;
       'api::kitoblar.kitoblar': ApiKitoblarKitoblar;
       'api::mualliflar.mualliflar': ApiMualliflarMualliflar;
       'api::statistika.statistika': ApiStatistikaStatistika;
