@@ -522,6 +522,129 @@ export interface ApiBlogPostlariBlogPostlari
   };
 }
 
+export interface ApiDonolarDonolar extends Struct.SingleTypeSchema {
+  collectionName: 'donolars';
+  info: {
+    displayName: 'Donolar';
+    pluralName: 'donolars';
+    singularName: 'donolar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Ismi: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Ismi2: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Ismi3: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Kim: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Kim2: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Kim3: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::donolar.donolar'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    Rasmi: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    Rasmi2: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Rasmi3: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Sharh: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Sharh2: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Sharh3: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
   extends Struct.SingleTypeSchema {
   collectionName: 'ijtimoiy_tarmoqlars';
@@ -538,6 +661,7 @@ export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     facebook_havolasi: Schema.Attribute.String;
+    Google_havolasi: Schema.Attribute.String;
     instagram_havolasi: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -546,11 +670,15 @@ export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    Telegram_bot: Schema.Attribute.String;
     telegram_havolasi: Schema.Attribute.String;
+    Telegram_kanal: Schema.Attribute.String;
     twitter_havolasi: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Viber_havolasi: Schema.Attribute.String;
+    Whatsapp_havolasi: Schema.Attribute.String;
     youtube_havolasi: Schema.Attribute.String;
   };
 }
@@ -1400,6 +1528,7 @@ declare module '@strapi/strapi' {
       'api::aloqa.aloqa': ApiAloqaAloqa;
       'api::biz-haqimizda.biz-haqimizda': ApiBizHaqimizdaBizHaqimizda;
       'api::blog-postlari.blog-postlari': ApiBlogPostlariBlogPostlari;
+      'api::donolar.donolar': ApiDonolarDonolar;
       'api::ijtimoiy-tarmoqlar.ijtimoiy-tarmoqlar': ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar;
       'api::jamoa-azolari.jamoa-azolari': ApiJamoaAzolariJamoaAzolari;
       'api::kategoriya.kategoriya': ApiKategoriyaKategoriya;

@@ -25,6 +25,21 @@
     },
     "twitter_havolasi": {
       "type": "string"
+    },
+    "Google_havolasi": {
+      "type": "string"
+    },
+    "Viber_havolasi": {
+      "type": "string"
+    },
+    "Whatsapp_havolasi": {
+      "type": "string"
+    },
+    "Telegram_bot": {
+      "type": "string"
+    },
+    "Telegram_kanal": {
+      "type": "string"
     }
   }
 }
