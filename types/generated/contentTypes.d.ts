@@ -599,7 +599,7 @@ export interface ApiDonolarDonolar extends Struct.SingleTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: false;
+          localized: true;
         };
       }>;
     Rasmi2: Schema.Attribute.Media<'images'> &
