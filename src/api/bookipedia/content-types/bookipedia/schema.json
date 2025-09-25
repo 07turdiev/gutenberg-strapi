@@ -33,8 +33,7 @@
         }
       },
       "targetField": "Nomi",
-      "required": true,
-      "minLength": 10
+      "required": true
     },
     "Rasmi": {
       "type": "media",
