@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-09-25T11:26:00.478Z"
+    "x-generation-date": "2025-09-26T11:21:31.339Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -15729,7 +15729,6 @@
                     "slug": {
                       "type": "string"
                     },
-                    "tarjimai_holi": {},
                     "rasmi": {
                       "type": "object",
                       "properties": {
@@ -15859,6 +15858,26 @@
                         }
                       }
                     },
+                    "Yonalish": {
+                      "type": "string"
+                    },
+                    "Tugulgan_joy": {
+                      "type": "string"
+                    },
+                    "Yillar": {
+                      "type": "string"
+                    },
+                    "Reyting": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "Qisqa_tavsif": {
+                      "type": "string"
+                    },
+                    "Nom2": {
+                      "type": "string"
+                    },
+                    "tarjimai_holi": {},
                     "romanlar_soni": {
                       "type": "integer"
                     },
@@ -17109,7 +17128,6 @@
               "slug": {
                 "type": "string"
               },
-              "tarjimai_holi": {},
               "rasmi": {
                 "type": "object",
                 "properties": {
@@ -17239,6 +17257,26 @@
                   }
                 }
               },
+              "Yonalish": {
+                "type": "string"
+              },
+              "Tugulgan_joy": {
+                "type": "string"
+              },
+              "Yillar": {
+                "type": "string"
+              },
+              "Reyting": {
+                "type": "number",
+                "format": "float"
+              },
+              "Qisqa_tavsif": {
+                "type": "string"
+              },
+              "Nom2": {
+                "type": "string"
+              },
+              "tarjimai_holi": {},
               "romanlar_soni": {
                 "type": "integer"
               },
@@ -17850,7 +17888,10 @@
           "data": {
             "required": [
               "ismi",
-              "slug"
+              "slug",
+              "Yonalish",
+              "Qisqa_tavsif",
+              "Nom2"
             ],
             "type": "object",
             "properties": {
@@ -17860,7 +17901,6 @@
               "slug": {
                 "type": "string"
               },
-              "tarjimai_holi": {},
               "rasmi": {
                 "oneOf": [
                   {
@@ -17872,6 +17912,26 @@
                 ],
                 "example": "string or id"
               },
+              "Yonalish": {
+                "type": "string"
+              },
+              "Tugulgan_joy": {
+                "type": "string"
+              },
+              "Yillar": {
+                "type": "string"
+              },
+              "Reyting": {
+                "type": "number",
+                "format": "float"
+              },
+              "Qisqa_tavsif": {
+                "type": "string"
+              },
+              "Nom2": {
+                "type": "string"
+              },
+              "tarjimai_holi": {},
               "romanlar_soni": {
                 "type": "integer"
               },
@@ -17949,7 +18009,10 @@
         "type": "object",
         "required": [
           "ismi",
-          "slug"
+          "slug",
+          "Yonalish",
+          "Qisqa_tavsif",
+          "Nom2"
         ],
         "properties": {
           "id": {
@@ -17964,7 +18027,6 @@
           "slug": {
             "type": "string"
           },
-          "tarjimai_holi": {},
           "rasmi": {
             "type": "object",
             "properties": {
@@ -18563,6 +18625,26 @@
               }
             }
           },
+          "Yonalish": {
+            "type": "string"
+          },
+          "Tugulgan_joy": {
+            "type": "string"
+          },
+          "Yillar": {
+            "type": "string"
+          },
+          "Reyting": {
+            "type": "number",
+            "format": "float"
+          },
+          "Qisqa_tavsif": {
+            "type": "string"
+          },
+          "Nom2": {
+            "type": "string"
+          },
+          "tarjimai_holi": {},
           "romanlar_soni": {
             "type": "integer"
           },
@@ -18899,7 +18981,6 @@
                     "slug": {
                       "type": "string"
                     },
-                    "tarjimai_holi": {},
                     "rasmi": {
                       "type": "object",
                       "properties": {
@@ -19029,6 +19110,26 @@
                         }
                       }
                     },
+                    "Yonalish": {
+                      "type": "string"
+                    },
+                    "Tugulgan_joy": {
+                      "type": "string"
+                    },
+                    "Yillar": {
+                      "type": "string"
+                    },
+                    "Reyting": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "Qisqa_tavsif": {
+                      "type": "string"
+                    },
+                    "Nom2": {
+                      "type": "string"
+                    },
+                    "tarjimai_holi": {},
                     "romanlar_soni": {
                       "type": "integer"
                     },
