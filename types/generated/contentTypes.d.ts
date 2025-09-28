@@ -1089,7 +1089,7 @@ export interface ApiMualliflarMualliflar extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::mualliflar.mualliflar'
     >;
-    Nom2: Schema.Attribute.String &
+    Nom2: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1151,6 +1151,12 @@ export interface ApiMualliflarMualliflar extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Video: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     Yillar: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

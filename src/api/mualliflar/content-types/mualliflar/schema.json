@@ -91,7 +91,7 @@
       "required": true
     },
     "Nom2": {
-      "type": "string",
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -106,6 +106,15 @@
           "localized": true
         }
       }
+    },
+    "Video": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "required": false
     },
     "romanlar_soni": {
       "type": "integer",
