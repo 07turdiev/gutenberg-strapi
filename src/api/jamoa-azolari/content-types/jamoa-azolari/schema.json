@@ -37,15 +37,6 @@
         "images"
       ]
     },
-    "tarjimai_holi": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
     "Lavozimi": {
       "type": "string",
       "pluginOptions": {
