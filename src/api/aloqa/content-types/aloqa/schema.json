@@ -11,15 +11,33 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "manzili": {
-      "type": "string"
+    "Matn": {
+      "type": "blocks",
+      "required": true
     },
-    "email": {
+    "Mualliflik_email": {
       "type": "email",
       "required": true
     },
-    "telefoni": {
-      "type": "string"
+    "Moliyaviy_email": {
+      "type": "email",
+      "required": true
+    },
+    "Tel_raqam1": {
+      "type": "string",
+      "required": true
+    },
+    "Tel_raqam2": {
+      "type": "string",
+      "required": true
+    },
+    "Manzil": {
+      "type": "text",
+      "required": true
+    },
+    "Joylashuv": {
+      "type": "string",
+      "required": true
     }
   }
 }

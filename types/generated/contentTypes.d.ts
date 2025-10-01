@@ -387,13 +387,17 @@ export interface ApiAloqaAloqa extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    Joylashuv: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::aloqa.aloqa'> &
       Schema.Attribute.Private;
-    manzili: Schema.Attribute.String;
+    Manzil: Schema.Attribute.Text & Schema.Attribute.Required;
+    Matn: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Moliyaviy_email: Schema.Attribute.Email & Schema.Attribute.Required;
+    Mualliflik_email: Schema.Attribute.Email & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
-    telefoni: Schema.Attribute.String;
+    Tel_raqam1: Schema.Attribute.String & Schema.Attribute.Required;
+    Tel_raqam2: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -775,6 +779,52 @@ export interface ApiDonolarDonolar extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHamkorlarFikriHamkorlarFikri
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'hamkorlar_fikris';
+  info: {
+    displayName: 'Hamkorlar-fikri';
+    pluralName: 'hamkorlar-fikris';
+    singularName: 'hamkorlar-fikri';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Ismi: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hamkorlar-fikri.hamkorlar-fikri'
+    >;
+    Matn: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1169,6 +1219,38 @@ export interface ApiMualliflarMualliflar extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMurojaatlarMurojaatlar extends Struct.CollectionTypeSchema {
+  collectionName: 'murojaatlars';
+  info: {
+    displayName: 'Murojaatlar';
+    pluralName: 'murojaatlars';
+    singularName: 'murojaatlar';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    Familiyasi: Schema.Attribute.String;
+    Ismi: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::murojaatlar.murojaatlar'
+    > &
+      Schema.Attribute.Private;
+    Mavzu: Schema.Attribute.String;
+    Murojaat_matni: Schema.Attribute.Blocks;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSliderSlider extends Struct.CollectionTypeSchema {
   collectionName: 'sliders';
   info: {
@@ -1432,62 +1514,6 @@ export interface PluginReviewWorkflowsWorkflowStage
       'manyToOne',
       'plugin::review-workflows.workflow'
     >;
-  };
-}
-
-export interface PluginStrapiPluginPdfCreatorTemplate
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'strapi-plugin-pdf-creator_template';
-  info: {
-    description: 'Templates used for PDF Template plugin';
-    displayName: 'PDF Templates';
-    kind: 'collectionType';
-    pluralName: 'templates';
-    singularName: 'template';
-    tableName: 'template';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: true;
-    };
-    'content-type-builder': {
-      visible: true;
-    };
-  };
-  attributes: {
-    collectionName: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 40;
-      }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    enabled: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
-    file: Schema.Attribute.Media<'files'> & Schema.Attribute.Required;
-    flattenDocument: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'plugin::strapi-plugin-pdf-creator.template'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 40;
-      }>;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
   };
 }
 
@@ -1768,18 +1794,19 @@ declare module '@strapi/strapi' {
       'api::blog-postlari.blog-postlari': ApiBlogPostlariBlogPostlari;
       'api::bookipedia.bookipedia': ApiBookipediaBookipedia;
       'api::donolar.donolar': ApiDonolarDonolar;
+      'api::hamkorlar-fikri.hamkorlar-fikri': ApiHamkorlarFikriHamkorlarFikri;
       'api::ijtimoiy-tarmoqlar.ijtimoiy-tarmoqlar': ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar;
       'api::jamoa-azolari.jamoa-azolari': ApiJamoaAzolariJamoaAzolari;
       'api::kategoriya.kategoriya': ApiKategoriyaKategoriya;
       'api::kitoblar.kitoblar': ApiKitoblarKitoblar;
       'api::mualliflar.mualliflar': ApiMualliflarMualliflar;
+      'api::murojaatlar.murojaatlar': ApiMurojaatlarMurojaatlar;
       'api::slider.slider': ApiSliderSlider;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
       'plugin::review-workflows.workflow': PluginReviewWorkflowsWorkflow;
       'plugin::review-workflows.workflow-stage': PluginReviewWorkflowsWorkflowStage;
-      'plugin::strapi-plugin-pdf-creator.template': PluginStrapiPluginPdfCreatorTemplate;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;

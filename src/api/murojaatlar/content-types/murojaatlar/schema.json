@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "murojaatlars",
+  "info": {
+    "singularName": "murojaatlar",
+    "pluralName": "murojaatlars",
+    "displayName": "Murojaatlar"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ismi": {
+      "type": "string"
+    },
+    "Familiyasi": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "Murojaat_matni": {
+      "type": "blocks"
+    },
+    "Mavzu": {
+      "type": "string"
+    }
+  }
+}

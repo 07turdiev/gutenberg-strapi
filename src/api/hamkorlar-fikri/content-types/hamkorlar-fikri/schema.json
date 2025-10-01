@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hamkorlar_fikris",
+  "info": {
+    "singularName": "hamkorlar-fikri",
+    "pluralName": "hamkorlar-fikris",
+    "displayName": "Hamkorlar-fikri"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Ismi": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "Matn": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    }
+  }
+}
