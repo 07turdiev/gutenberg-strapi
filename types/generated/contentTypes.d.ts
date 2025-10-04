@@ -785,6 +785,53 @@ export interface ApiDonolarDonolar extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiFoydalanishShartlariFoydalanishShartlari
+  extends Struct.SingleTypeSchema {
+  collectionName: 'foydalanish_shartlaris';
+  info: {
+    displayName: 'Foydalanish shartlari';
+    pluralName: 'foydalanish-shartlaris';
+    singularName: 'foydalanish-shartlari';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    Brendbook: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::foydalanish-shartlari.foydalanish-shartlari'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHamkorlarFikriHamkorlarFikri
   extends Struct.CollectionTypeSchema {
   collectionName: 'hamkorlar_fikris';
@@ -1794,6 +1841,7 @@ declare module '@strapi/strapi' {
       'api::blog-postlari.blog-postlari': ApiBlogPostlariBlogPostlari;
       'api::bookipedia.bookipedia': ApiBookipediaBookipedia;
       'api::donolar.donolar': ApiDonolarDonolar;
+      'api::foydalanish-shartlari.foydalanish-shartlari': ApiFoydalanishShartlariFoydalanishShartlari;
       'api::hamkorlar-fikri.hamkorlar-fikri': ApiHamkorlarFikriHamkorlarFikri;
       'api::ijtimoiy-tarmoqlar.ijtimoiy-tarmoqlar': ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar;
       'api::jamoa-azolari.jamoa-azolari': ApiJamoaAzolariJamoaAzolari;

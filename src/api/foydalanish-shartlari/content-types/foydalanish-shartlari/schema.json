@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "foydalanish_shartlaris",
+  "info": {
+    "singularName": "foydalanish-shartlari",
+    "pluralName": "foydalanish-shartlaris",
+    "displayName": "Foydalanish shartlari"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "text": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Brendbook": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
