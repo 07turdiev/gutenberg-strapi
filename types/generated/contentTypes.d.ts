@@ -878,6 +878,51 @@ export interface ApiHamkorlarFikriHamkorlarFikri
   };
 }
 
+export interface ApiHujjatlarHujjatlar extends Struct.CollectionTypeSchema {
+  collectionName: 'hujjatlars';
+  info: {
+    displayName: 'Hujjatlar';
+    pluralName: 'hujjatlars';
+    singularName: 'hujjatlar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hujjatlar.hujjatlar'
+    >;
+    Nomi: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    Rasmi: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
   extends Struct.SingleTypeSchema {
   collectionName: 'ijtimoiy_tarmoqlars';
@@ -1147,6 +1192,44 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMaxfiylikSiyosatiMaxfiylikSiyosati
+  extends Struct.SingleTypeSchema {
+  collectionName: 'maxfiylik_siyosatis';
+  info: {
+    displayName: 'Maxfiylik siyosati';
+    pluralName: 'maxfiylik-siyosatis';
+    singularName: 'maxfiylik-siyosati';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::maxfiylik-siyosati.maxfiylik-siyosati'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    text: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMualliflarMualliflar extends Struct.CollectionTypeSchema {
   collectionName: 'mualliflars';
   info: {
@@ -1292,35 +1375,6 @@ export interface ApiMurojaatlarMurojaatlar extends Struct.CollectionTypeSchema {
     Mavzu: Schema.Attribute.String;
     Murojaat_matni: Schema.Attribute.Blocks;
     publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiSliderSlider extends Struct.CollectionTypeSchema {
-  collectionName: 'sliders';
-  info: {
-    displayName: 'Slider';
-    pluralName: 'sliders';
-    singularName: 'slider';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::slider.slider'
-    > &
-      Schema.Attribute.Private;
-    Nomi: Schema.Attribute.Text & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    Rasm: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1843,13 +1897,14 @@ declare module '@strapi/strapi' {
       'api::donolar.donolar': ApiDonolarDonolar;
       'api::foydalanish-shartlari.foydalanish-shartlari': ApiFoydalanishShartlariFoydalanishShartlari;
       'api::hamkorlar-fikri.hamkorlar-fikri': ApiHamkorlarFikriHamkorlarFikri;
+      'api::hujjatlar.hujjatlar': ApiHujjatlarHujjatlar;
       'api::ijtimoiy-tarmoqlar.ijtimoiy-tarmoqlar': ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar;
       'api::jamoa-azolari.jamoa-azolari': ApiJamoaAzolariJamoaAzolari;
       'api::kategoriya.kategoriya': ApiKategoriyaKategoriya;
       'api::kitoblar.kitoblar': ApiKitoblarKitoblar;
+      'api::maxfiylik-siyosati.maxfiylik-siyosati': ApiMaxfiylikSiyosatiMaxfiylikSiyosati;
       'api::mualliflar.mualliflar': ApiMualliflarMualliflar;
       'api::murojaatlar.murojaatlar': ApiMurojaatlarMurojaatlar;
-      'api::slider.slider': ApiSliderSlider;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
