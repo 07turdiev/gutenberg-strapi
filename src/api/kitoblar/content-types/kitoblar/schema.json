@@ -70,24 +70,6 @@
         "yosh21"
       ]
     },
-    "dolzarb": {
-      "type": "boolean",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "default": false
-    },
-    "yangi": {
-      "type": "boolean",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "default": true
-    },
     "reyting": {
       "type": "decimal",
       "pluginOptions": {
@@ -158,15 +140,18 @@
       },
       "default": 0
     },
-    "audio": {
+    "Fragment": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "multiple": false,
       "allowedTypes": [
+        "images",
+        "files",
+        "videos",
         "audios"
       ]
     },
@@ -181,6 +166,45 @@
       "relation": "manyToMany",
       "target": "api::kategoriya.kategoriya",
       "mappedBy": "kitoblar"
+    },
+    "Rasm1": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Rams2": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Rasm": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

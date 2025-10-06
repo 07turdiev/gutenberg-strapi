@@ -1060,12 +1060,6 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    audio: Schema.Attribute.Media<'audios'> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     chegirma_narxi: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1081,13 +1075,12 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    dolzarb: Schema.Attribute.Boolean &
+    Fragment: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
-      }> &
-      Schema.Attribute.DefaultTo<false>;
+      }>;
     ISBN: Schema.Attribute.Text &
       Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
@@ -1137,6 +1130,27 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
+    Rams2: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    Rasm: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    Rasm1: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     reyting: Schema.Attribute.Decimal &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1174,13 +1188,6 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    yangi: Schema.Attribute.Boolean &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }> &
-      Schema.Attribute.DefaultTo<true>;
     yosh_chegarasi: Schema.Attribute.Enumeration<
       ['yosh6', 'yosh12', 'yosh18', 'yosh21']
     > &
