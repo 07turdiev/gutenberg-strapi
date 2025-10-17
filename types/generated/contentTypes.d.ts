@@ -407,7 +407,7 @@ export interface ApiAloqaAloqa extends Struct.SingleTypeSchema {
 export interface ApiBizHaqimizdaBizHaqimizda extends Struct.SingleTypeSchema {
   collectionName: 'biz_haqimizdas';
   info: {
-    displayName: 'Biz-haqimizda';
+    displayName: 'Biz haqimizda';
     pluralName: 'biz-haqimizdas';
     singularName: 'biz-haqimizda';
   };
@@ -446,7 +446,7 @@ export interface ApiBlogPostlariBlogPostlari
   extends Struct.CollectionTypeSchema {
   collectionName: 'blog_postlaris';
   info: {
-    displayName: 'Blog-postlari';
+    displayName: 'Blog postlari';
     pluralName: 'blog-postlaris';
     singularName: 'blog-postlari';
   };
@@ -836,7 +836,7 @@ export interface ApiHamkorlarFikriHamkorlarFikri
   extends Struct.CollectionTypeSchema {
   collectionName: 'hamkorlar_fikris';
   info: {
-    displayName: 'Hamkorlar-fikri';
+    displayName: 'Hamkorlar fikri';
     pluralName: 'hamkorlar-fikris';
     singularName: 'hamkorlar-fikri';
   };
@@ -927,7 +927,7 @@ export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
   extends Struct.SingleTypeSchema {
   collectionName: 'ijtimoiy_tarmoqlars';
   info: {
-    displayName: 'Ijtimoiy-tarmoqlar';
+    displayName: 'Ijtimoiy tarmoqlar';
     pluralName: 'ijtimoiy-tarmoqlars';
     singularName: 'ijtimoiy-tarmoqlar';
   };
@@ -965,7 +965,7 @@ export interface ApiJamoaAzolariJamoaAzolari
   extends Struct.CollectionTypeSchema {
   collectionName: 'jamoa_azolaris';
   info: {
-    displayName: 'Jamoa-azolari';
+    displayName: 'Jamoa azolari';
     pluralName: 'jamoa-azolaris';
     singularName: 'jamoa-azolari';
   };
@@ -1066,12 +1066,6 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    chop_yili: Schema.Attribute.Integer &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1122,13 +1116,6 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    omborda: Schema.Attribute.Integer &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }> &
-      Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
     Rasm: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required &
@@ -1158,12 +1145,6 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<0>;
-    sahifalar_soni: Schema.Attribute.Integer &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     slug: Schema.Attribute.UID<'nomi'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -1188,14 +1169,6 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    yosh_chegarasi: Schema.Attribute.Enumeration<
-      ['yosh6', 'yosh12', 'yosh18', 'yosh21']
-    > &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
   };
 }
 

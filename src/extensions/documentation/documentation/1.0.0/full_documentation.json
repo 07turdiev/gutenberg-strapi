@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-17T20:11:21.691Z"
+    "x-generation-date": "2025-10-17T21:05:38.756Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -19259,15 +19259,6 @@
                     }
                   }
                 },
-                "yosh_chegarasi": {
-                  "type": "string",
-                  "enum": [
-                    "yosh6",
-                    "yosh12",
-                    "yosh18",
-                    "yosh21"
-                  ]
-                },
                 "reyting": {
                   "type": "number",
                   "format": "float"
@@ -19285,15 +19276,6 @@
                 },
                 "ISBN": {
                   "type": "string"
-                },
-                "sahifalar_soni": {
-                  "type": "integer"
-                },
-                "chop_yili": {
-                  "type": "integer"
-                },
-                "omborda": {
-                  "type": "integer"
                 },
                 "mualliflar": {
                   "type": "object",
@@ -20289,15 +20271,6 @@
                 ],
                 "example": "string or id"
               },
-              "yosh_chegarasi": {
-                "type": "string",
-                "enum": [
-                  "yosh6",
-                  "yosh12",
-                  "yosh18",
-                  "yosh21"
-                ]
-              },
               "reyting": {
                 "type": "number",
                 "format": "float"
@@ -20315,15 +20288,6 @@
               },
               "ISBN": {
                 "type": "string"
-              },
-              "sahifalar_soni": {
-                "type": "integer"
-              },
-              "chop_yili": {
-                "type": "integer"
-              },
-              "omborda": {
-                "type": "integer"
               },
               "mualliflar": {
                 "oneOf": [
@@ -21075,15 +21039,6 @@
               }
             }
           },
-          "yosh_chegarasi": {
-            "type": "string",
-            "enum": [
-              "yosh6",
-              "yosh12",
-              "yosh18",
-              "yosh21"
-            ]
-          },
           "reyting": {
             "type": "number",
             "format": "float"
@@ -21101,15 +21056,6 @@
           },
           "ISBN": {
             "type": "string"
-          },
-          "sahifalar_soni": {
-            "type": "integer"
-          },
-          "chop_yili": {
-            "type": "integer"
-          },
-          "omborda": {
-            "type": "integer"
           },
           "mualliflar": {
             "type": "object",
@@ -21428,15 +21374,6 @@
                         }
                       }
                     },
-                    "yosh_chegarasi": {
-                      "type": "string",
-                      "enum": [
-                        "yosh6",
-                        "yosh12",
-                        "yosh18",
-                        "yosh21"
-                      ]
-                    },
                     "reyting": {
                       "type": "number",
                       "format": "float"
@@ -21454,15 +21391,6 @@
                     },
                     "ISBN": {
                       "type": "string"
-                    },
-                    "sahifalar_soni": {
-                      "type": "integer"
-                    },
-                    "chop_yili": {
-                      "type": "integer"
-                    },
-                    "omborda": {
-                      "type": "integer"
                     },
                     "mualliflar": {
                       "type": "object",
@@ -24143,15 +24071,6 @@
                     }
                   }
                 },
-                "yosh_chegarasi": {
-                  "type": "string",
-                  "enum": [
-                    "yosh6",
-                    "yosh12",
-                    "yosh18",
-                    "yosh21"
-                  ]
-                },
                 "reyting": {
                   "type": "number",
                   "format": "float"
@@ -24169,15 +24088,6 @@
                 },
                 "ISBN": {
                   "type": "string"
-                },
-                "sahifalar_soni": {
-                  "type": "integer"
-                },
-                "chop_yili": {
-                  "type": "integer"
-                },
-                "omborda": {
-                  "type": "integer"
                 },
                 "mualliflar": {
                   "type": "object",

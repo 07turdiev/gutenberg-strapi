@@ -56,20 +56,6 @@
         "images"
       ]
     },
-    "yosh_chegarasi": {
-      "type": "enumeration",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "enum": [
-        "yosh6",
-        "yosh12",
-        "yosh18",
-        "yosh21"
-      ]
-    },
     "reyting": {
       "type": "decimal",
       "pluginOptions": {
@@ -114,31 +100,6 @@
         }
       },
       "unique": true
-    },
-    "sahifalar_soni": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "chop_yili": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      }
-    },
-    "omborda": {
-      "type": "integer",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "default": 0
     },
     "mualliflar": {
       "type": "relation",

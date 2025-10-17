@@ -4,7 +4,7 @@
   "info": {
     "singularName": "blog-postlari",
     "pluralName": "blog-postlaris",
-    "displayName": "Blog-postlari"
+    "displayName": "Blog postlari"
   },
   "options": {
     "draftAndPublish": true
