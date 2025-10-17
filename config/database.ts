@@ -27,8 +27,8 @@ export default ({ env }) => {
         connectionString: env('DATABASE_URL'),
         host: env('DATABASE_HOST', 'localhost'),
         port: env.int('DATABASE_PORT', 5432),
-        database: env('DATABASE_NAME', 'Gutenburg_db'),
-        user: env('DATABASE_USERNAME', 'Gutenburg'),
+        database: env('DATABASE_NAME', 'Gutenberg_db'),
+        user: env('DATABASE_USERNAME', 'Gutenberg'),
         password: env('DATABASE_PASSWORD', '2002'),
         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
@@ -42,6 +42,7 @@ export default ({ env }) => {
       },
       pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
     },
+
     sqlite: {
       connection: {
         filename: path.join(__dirname, '..', '..', env('DATABASE_FILENAME', '.tmp/data.db')),

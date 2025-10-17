@@ -1075,7 +1075,7 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Fragment: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+    Fragment: Schema.Attribute.Media<'files'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
@@ -1130,13 +1130,6 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
       }> &
       Schema.Attribute.DefaultTo<0>;
     publishedAt: Schema.Attribute.DateTime;
-    Rams2: Schema.Attribute.Media<'images'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     Rasm: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -1145,6 +1138,13 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
         };
       }>;
     Rasm1: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    Rasm2: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

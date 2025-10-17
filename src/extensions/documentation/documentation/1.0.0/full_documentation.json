@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-06T06:11:48.380Z"
+    "x-generation-date": "2025-10-17T20:11:21.691Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -19295,135 +19295,6 @@
                 "omborda": {
                   "type": "integer"
                 },
-                "Fragment": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "documentId": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "alternativeText": {
-                      "type": "string"
-                    },
-                    "caption": {
-                      "type": "string"
-                    },
-                    "width": {
-                      "type": "integer"
-                    },
-                    "height": {
-                      "type": "integer"
-                    },
-                    "formats": {},
-                    "hash": {
-                      "type": "string"
-                    },
-                    "ext": {
-                      "type": "string"
-                    },
-                    "mime": {
-                      "type": "string"
-                    },
-                    "size": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "url": {
-                      "type": "string"
-                    },
-                    "previewUrl": {
-                      "type": "string"
-                    },
-                    "provider": {
-                      "type": "string"
-                    },
-                    "provider_metadata": {},
-                    "related": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "folder": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "folderPath": {
-                      "type": "string"
-                    },
-                    "createdAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "createdBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "updatedBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "locale": {
-                      "type": "string"
-                    },
-                    "localizations": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
                 "mualliflar": {
                   "type": "object",
                   "properties": {
@@ -19746,6 +19617,135 @@
                     }
                   }
                 },
+                "Fragment": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {},
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {},
+                    "related": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "folder": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "folderPath": {
+                      "type": "string"
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publishedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "createdBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "updatedBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "locale": {
+                      "type": "string"
+                    },
+                    "localizations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "Rasm1": {
                   "type": "object",
                   "properties": {
@@ -19875,7 +19875,7 @@
                     }
                   }
                 },
-                "Rams2": {
+                "Rasm2": {
                   "type": "object",
                   "properties": {
                     "id": {
@@ -20266,7 +20266,7 @@
               "narxi",
               "sotib_olish",
               "Rasm1",
-              "Rams2",
+              "Rasm2",
               "Rasm"
             ],
             "type": "object",
@@ -20325,17 +20325,6 @@
               "omborda": {
                 "type": "integer"
               },
-              "Fragment": {
-                "oneOf": [
-                  {
-                    "type": "integer"
-                  },
-                  {
-                    "type": "string"
-                  }
-                ],
-                "example": "string or id"
-              },
               "mualliflar": {
                 "oneOf": [
                   {
@@ -20361,6 +20350,17 @@
                   "example": "string or id"
                 }
               },
+              "Fragment": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
               "Rasm1": {
                 "oneOf": [
                   {
@@ -20372,7 +20372,7 @@
                 ],
                 "example": "string or id"
               },
-              "Rams2": {
+              "Rasm2": {
                 "oneOf": [
                   {
                     "type": "integer"
@@ -20460,7 +20460,7 @@
           "narxi",
           "sotib_olish",
           "Rasm1",
-          "Rams2",
+          "Rasm2",
           "Rasm"
         ],
         "properties": {
@@ -21111,135 +21111,6 @@
           "omborda": {
             "type": "integer"
           },
-          "Fragment": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "number"
-              },
-              "documentId": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {},
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number",
-                "format": "float"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {},
-              "related": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "documentId": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "folder": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "number"
-                  },
-                  "documentId": {
-                    "type": "string"
-                  }
-                }
-              },
-              "folderPath": {
-                "type": "string"
-              },
-              "createdAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "updatedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "publishedAt": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "createdBy": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "number"
-                  },
-                  "documentId": {
-                    "type": "string"
-                  }
-                }
-              },
-              "updatedBy": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "number"
-                  },
-                  "documentId": {
-                    "type": "string"
-                  }
-                }
-              },
-              "locale": {
-                "type": "string"
-              },
-              "localizations": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "documentId": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
           "mualliflar": {
             "type": "object",
             "properties": {
@@ -21593,6 +21464,102 @@
                     "omborda": {
                       "type": "integer"
                     },
+                    "mualliflar": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "kategoriya": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          },
+                          "Nomi": {
+                            "type": "string"
+                          },
+                          "slug": {
+                            "type": "string"
+                          },
+                          "kitoblar": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "createdAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "updatedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "publishedAt": {
+                            "type": "string",
+                            "format": "date-time"
+                          },
+                          "createdBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "updatedBy": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "documentId": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "locale": {
+                            "type": "string"
+                          },
+                          "localizations": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "documentId": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
                     "Fragment": {
                       "type": "object",
                       "properties": {
@@ -21716,102 +21683,6 @@
                               },
                               "documentId": {
                                 "type": "string"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    },
-                    "mualliflar": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "kategoriya": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          },
-                          "Nomi": {
-                            "type": "string"
-                          },
-                          "slug": {
-                            "type": "string"
-                          },
-                          "kitoblar": {
-                            "type": "array",
-                            "items": {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "number"
-                                },
-                                "documentId": {
-                                  "type": "string"
-                                }
-                              }
-                            }
-                          },
-                          "createdAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "updatedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "publishedAt": {
-                            "type": "string",
-                            "format": "date-time"
-                          },
-                          "createdBy": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "number"
-                              },
-                              "documentId": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "updatedBy": {
-                            "type": "object",
-                            "properties": {
-                              "id": {
-                                "type": "number"
-                              },
-                              "documentId": {
-                                "type": "string"
-                              }
-                            }
-                          },
-                          "locale": {
-                            "type": "string"
-                          },
-                          "localizations": {
-                            "type": "array",
-                            "items": {
-                              "type": "object",
-                              "properties": {
-                                "id": {
-                                  "type": "number"
-                                },
-                                "documentId": {
-                                  "type": "string"
-                                }
                               }
                             }
                           }
@@ -21947,7 +21818,7 @@
                         }
                       }
                     },
-                    "Rams2": {
+                    "Rasm2": {
                       "type": "object",
                       "properties": {
                         "id": {
@@ -22326,6 +22197,135 @@
               }
             }
           },
+          "Fragment": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "documentId": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {},
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number",
+                "format": "float"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {},
+              "related": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "folder": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "folderPath": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "publishedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "createdBy": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "updatedBy": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "documentId": {
+                    "type": "string"
+                  }
+                }
+              },
+              "locale": {
+                "type": "string"
+              },
+              "localizations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
           "Rasm1": {
             "type": "object",
             "properties": {
@@ -22455,7 +22455,7 @@
               }
             }
           },
-          "Rams2": {
+          "Rasm2": {
             "type": "object",
             "properties": {
               "id": {
@@ -24179,135 +24179,6 @@
                 "omborda": {
                   "type": "integer"
                 },
-                "Fragment": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "number"
-                    },
-                    "documentId": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "alternativeText": {
-                      "type": "string"
-                    },
-                    "caption": {
-                      "type": "string"
-                    },
-                    "width": {
-                      "type": "integer"
-                    },
-                    "height": {
-                      "type": "integer"
-                    },
-                    "formats": {},
-                    "hash": {
-                      "type": "string"
-                    },
-                    "ext": {
-                      "type": "string"
-                    },
-                    "mime": {
-                      "type": "string"
-                    },
-                    "size": {
-                      "type": "number",
-                      "format": "float"
-                    },
-                    "url": {
-                      "type": "string"
-                    },
-                    "previewUrl": {
-                      "type": "string"
-                    },
-                    "provider": {
-                      "type": "string"
-                    },
-                    "provider_metadata": {},
-                    "related": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "folder": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "folderPath": {
-                      "type": "string"
-                    },
-                    "createdAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "updatedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "publishedAt": {
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "createdBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "updatedBy": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "number"
-                        },
-                        "documentId": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "locale": {
-                      "type": "string"
-                    },
-                    "localizations": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "number"
-                          },
-                          "documentId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
                 "mualliflar": {
                   "type": "object",
                   "properties": {
@@ -24630,6 +24501,135 @@
                     }
                   }
                 },
+                "Fragment": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "number"
+                    },
+                    "documentId": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "alternativeText": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "width": {
+                      "type": "integer"
+                    },
+                    "height": {
+                      "type": "integer"
+                    },
+                    "formats": {},
+                    "hash": {
+                      "type": "string"
+                    },
+                    "ext": {
+                      "type": "string"
+                    },
+                    "mime": {
+                      "type": "string"
+                    },
+                    "size": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "previewUrl": {
+                      "type": "string"
+                    },
+                    "provider": {
+                      "type": "string"
+                    },
+                    "provider_metadata": {},
+                    "related": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "folder": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "folderPath": {
+                      "type": "string"
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "publishedAt": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "createdBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "updatedBy": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "documentId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "locale": {
+                      "type": "string"
+                    },
+                    "localizations": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "documentId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "Rasm1": {
                   "type": "object",
                   "properties": {
@@ -24759,7 +24759,7 @@
                     }
                   }
                 },
-                "Rams2": {
+                "Rasm2": {
                   "type": "object",
                   "properties": {
                     "id": {

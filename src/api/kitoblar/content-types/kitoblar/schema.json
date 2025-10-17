@@ -140,21 +140,6 @@
       },
       "default": 0
     },
-    "Fragment": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "mualliflar": {
       "type": "relation",
       "relation": "manyToOne",
@@ -166,6 +151,18 @@
       "relation": "manyToMany",
       "target": "api::kategoriya.kategoriya",
       "mappedBy": "kitoblar"
+    },
+    "Fragment": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
     },
     "Rasm1": {
       "type": "media",
@@ -180,7 +177,7 @@
         "images"
       ]
     },
-    "Rams2": {
+    "Rasm2": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
