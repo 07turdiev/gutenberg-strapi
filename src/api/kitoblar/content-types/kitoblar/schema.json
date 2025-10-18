@@ -163,6 +163,18 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "Ilova": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
     }
   }
 }

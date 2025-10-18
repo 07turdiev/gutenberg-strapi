@@ -1075,6 +1075,12 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    Ilova: Schema.Attribute.Media<'files'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     ISBN: Schema.Attribute.Text &
       Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
