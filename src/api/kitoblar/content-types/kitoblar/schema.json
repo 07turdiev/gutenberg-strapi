@@ -34,15 +34,6 @@
       "targetField": "nomi",
       "required": true
     },
-    "tavsifi": {
-      "type": "blocks",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
     "muqova": {
       "type": "media",
       "pluginOptions": {
@@ -125,45 +116,6 @@
         "files"
       ]
     },
-    "Rasm1": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "Rasm2": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "Rasm": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "Ilova": {
       "type": "media",
       "pluginOptions": {
@@ -175,6 +127,15 @@
       "allowedTypes": [
         "files"
       ]
+    },
+    "tavsifi": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
     }
   }
 }
