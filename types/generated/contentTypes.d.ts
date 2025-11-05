@@ -1091,8 +1091,8 @@ export interface ApiKitoblarKitoblar extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::kitoblar.kitoblar'
     >;
-    mualliflar: Schema.Attribute.Relation<
-      'manyToOne',
+    mualliflars: Schema.Attribute.Relation<
+      'oneToMany',
       'api::mualliflar.mualliflar'
     >;
     muqova: Schema.Attribute.Media<'images'> &
@@ -1215,7 +1215,7 @@ export interface ApiMualliflarMualliflar extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    kitoblars: Schema.Attribute.Relation<'oneToMany', 'api::kitoblar.kitoblar'>;
+    kitoblar: Schema.Attribute.Relation<'manyToOne', 'api::kitoblar.kitoblar'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

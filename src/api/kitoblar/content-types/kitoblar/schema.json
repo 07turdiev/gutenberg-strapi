@@ -92,11 +92,11 @@
       },
       "unique": true
     },
-    "mualliflar": {
+    "mualliflars": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::mualliflar.mualliflar",
-      "inversedBy": "kitoblars"
+      "mappedBy": "kitoblar"
     },
     "kategoriya": {
       "type": "relation",
