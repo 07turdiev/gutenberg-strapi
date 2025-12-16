@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-11-05T06:03:40.505Z"
+    "x-generation-date": "2025-12-16T15:15:21.609Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -17067,6 +17067,9 @@
               "Telegram_kanal": {
                 "type": "string"
               },
+              "linkedin_havolasi": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -17160,6 +17163,9 @@
             "type": "string"
           },
           "Telegram_kanal": {
+            "type": "string"
+          },
+          "linkedin_havolasi": {
             "type": "string"
           },
           "createdAt": {
@@ -17490,6 +17496,9 @@
                   "type": "string"
                 },
                 "Telegram_kanal": {
+                  "type": "string"
+                },
+                "linkedin_havolasi": {
                   "type": "string"
                 },
                 "createdAt": {

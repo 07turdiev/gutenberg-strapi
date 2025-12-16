@@ -935,6 +935,7 @@ export interface ApiIjtimoiyTarmoqlarIjtimoiyTarmoqlar
     facebook_havolasi: Schema.Attribute.String;
     Google_havolasi: Schema.Attribute.String;
     instagram_havolasi: Schema.Attribute.String;
+    linkedin_havolasi: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

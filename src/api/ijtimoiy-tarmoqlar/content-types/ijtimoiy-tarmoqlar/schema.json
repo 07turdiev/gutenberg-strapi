@@ -40,6 +40,9 @@
     },
     "Telegram_kanal": {
       "type": "string"
+    },
+    "linkedin_havolasi": {
+      "type": "string"
     }
   }
 }
